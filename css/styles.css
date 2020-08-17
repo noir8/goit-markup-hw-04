@@ -9,6 +9,7 @@ body {
 	color: var(--primary-text-color);
 	font-family: Roboto, sans-serif;
 }
+
 html {
 	box-sizing: border-box;
 }
@@ -18,6 +19,10 @@ html {
 *::after {
 	box-sizing: inherit;
 }
+a:focus {
+	outline: 1px solid #2196f3;
+}
+
 .container {
 	width: 1200px;
 	margin-left: auto;
@@ -138,11 +143,17 @@ p {
 .head-contacts a:visited {
 	color: #757575;
 }
+.head-contacts a:focus {
+	color: #2196f3;
+}
 
 .head-contacts a:hover {
 	color: #2196f3;
 }
 .link-button:hover .head-contacts-icon {
+	fill: #2196f3;
+}
+.link-button:focus .head-contacts-icon {
 	fill: #2196f3;
 }
 
@@ -160,8 +171,6 @@ p {
 	margin-right: auto;
 	padding-top: 200px;
 	padding-bottom: 200px;
-	padding-left: 452px;
-	padding-right: 452px;
 }
 .site-overlay .site-overlay-title {
 	font-family: roboto, sans-serif;
@@ -309,6 +318,14 @@ p {
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	color: #ffffff;
 }
+.portfolio-overlay .btn:focus {
+	text-decoration: none;
+	background: #2196f3;
+
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	color: #ffffff;
+}
+
 .site-features h3 {
 	font-family: roboto, sans-serif;
 
@@ -461,10 +478,18 @@ p {
 	fill: #afb1b8;
 	border-radius: 50%;
 }
+
 .social-icon-button:hover {
 	background: #2196f3;
 }
+.social-icon-button:focus {
+	background: #2196f3;
+}
+
 .social-icon-button:hover .social-icon {
+	fill: #fff;
+}
+.social-icon-button:focus .social-icon {
 	fill: #fff;
 }
 .site-our-clients {
@@ -494,7 +519,14 @@ p {
 .client-button:hover .client-icon {
 	fill: #2196f3;
 }
+.client-button:focus .client-icon {
+	fill: #2196f3;
+}
+
 .client-item:hover {
+	border-color: #2196f3;
+}
+.client-item:focus {
 	border-color: #2196f3;
 }
 .site-our-clients .our-clients-title {
@@ -620,41 +652,42 @@ p {
 
 	color: #ffffff;
 }
-.container-footer .join-us-list {
+.join-us-list {
 	display: flex;
 
 	margin-top: 20px;
 }
-.join-us-list .item {
-	display: inline-block;
+.join-us-list {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+.footer-social-icon-item:not(:last-child) {
+	margin-right: 10px;
+}
+.footer-social-button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	width: 44px;
 	height: 44px;
-	background-color: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.1);
+
+	fill: #fff;
 	border-radius: 50%;
-	background-repeat: no-repeat;
-	background-position: center;
+}
+.footer-social-button:hover {
+	background: #2196f3;
+}
+.footer-social-button:focus {
+	background: #2196f3;
 }
 
-.join-us-list .icon-instagram {
-	background-image: url("../images/social/instagram-1.svg");
+.footer-social-button:hover .footer-social-icon {
+	fill: #fff;
 }
-.join-us-list .icon-twitter {
-	background-image: url("../images/social/twitter-1.svg");
-}
-.join-us-list .icon-facebook {
-	background-image: url("../images/social/facebook-1.svg");
-}
-.join-us-list .icon-linkedin {
-	background-image: url("../images/social/linkedin-1.svg");
-}
-.join-us-list .item:hover {
-	background-color: #2196f3;
-}
-.join-us-list .item:hover {
-	background-color: #2196f3;
-}
-.join-us-list .item:not(:last-child) {
-	margin-right: 10px;
+.footer-social-button:focus .footer-social-icon {
+	fill: #fff;
 }
 .portfolio-products {
 	display: flex;
@@ -664,7 +697,8 @@ p {
 .portfolio-product-section-1 {
 	border: 1px solid #eeeeee;
 }
-.portfolio-products a {
+.portfolio-products .products-btn {
+	display: inline-block;
 	text-decoration: none;
 }
 .portfolio-product-pic {
@@ -688,6 +722,7 @@ p {
 .portfolio-products .portfolio-product-discription:hover {
 	background: rgba(33, 150, 243, 0.9);
 }
+
 /*
 Разберусь в следующих дз.
 
