@@ -114,6 +114,13 @@ p {
 .site-nav .link.current {
 	color: #2196f3;
 }
+.site-nav a:hover {
+	color: #2196f3;
+}
+.site-nav a:focus {
+	color: #2196f3;
+}
+
 .head-contacts {
 	display: inline-flex;
 	padding-top: 32px;
@@ -145,7 +152,6 @@ p {
 }
 .head-contacts a:focus {
 	color: #2196f3;
-	
 }
 
 .head-contacts a:hover {
@@ -501,13 +507,26 @@ p {
 	display: flex;
 	justify-content: center;
 }
-.client-item {
+.client-button {
 	box-sizing: border-box;
-	border: 1px solid #afb1b8;
+	border: 1px solid;
 	border-radius: 4px;
+	border-color: #afb1b8;
 }
 .client-item:not(:last-child) {
 	margin-right: 30px;
+}
+.client-item :focus {
+	border-color: #2196f3;
+}
+.client-item :hover {
+	border-color: #2196f3;
+}
+.client-button:hover {
+	fill: #2196f3;
+}
+.client-button:focus {
+	fill: #2196f3;
 }
 .client-button {
 	display: inline-flex;
@@ -517,19 +536,7 @@ p {
 	width: 170px;
 	height: 90px;
 }
-.client-button:hover .client-icon {
-	fill: #2196f3;
-}
-.client-button:focus .client-icon {
-	fill: #2196f3;
-}
 
-.client-item:hover {
-	border-color: #2196f3;
-}
-.client-item:focus {
-	border-color: #2196f3;
-}
 .site-our-clients .our-clients-title {
 	font-family: raleway, sans-serif;
 	margin-bottom: 50px;
